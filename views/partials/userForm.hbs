@@ -1,0 +1,65 @@
+<div class="col-6">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="First Name"
+      name="first_name"
+      value="{{this.first_name}}"
+    />
+  </div>
+</div>
+<div class="col-6">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Last Name"
+      name="last_name"
+      value="{{this.last_name}}"
+    />
+  </div>
+</div>
+<div class="col-6">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+      name="email"
+      value="{{this.email}}"
+    />
+  </div>
+</div>
+<div class="col-6">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Phone</label>
+    <input
+      type="Number"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Phone No:"
+      name="phone"
+      value="{{this.phone}}"
+    />
+  </div>
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+  <textarea
+    class="form-control"
+    id="exampleFormControlTextarea1"
+    rows="3"
+    name="comment"
+  >{{this.comment}}</textarea>
+</div>
+<div class="col-12 d-grid">
+  <button class="btn btn-primary" type="submit">Submit User</button>
+</div>

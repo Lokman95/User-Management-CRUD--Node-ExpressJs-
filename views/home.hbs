@@ -1,0 +1,58 @@
+{{#if deleteUser}}
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <strong>{{deleteUser}}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/if}}
+
+<div class="row">
+  <div class="col-6">
+    <h2>Users</h2>
+  </div>
+  <div class="col-6 d-flex justify-content-end pb-2">
+    <a href="create" class="btn btn-primary float-right">+Create</a>
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Comment</th>
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+      <tr>
+        <th scope="row">{{this.id}}</th>
+        <td>{{this.first_name}}</td>
+        <td>{{this.last_name}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.phone}}</td>
+        <td>{{this.comment}}</td>
+        <td class="text-end">
+          <a href="/viewUser/{{this.id}}" class="btn btn-primary btn-small"><i
+              class="bi bi-eye"
+            ></i></a>
+          <a href="/edit/{{this.id}}" class="btn btn-success btn-small"><i
+              class="bi bi-pencil"
+            ></i></a>
+          <a href="/{{this.id}}" class="btn btn-info btn-danger"><i
+              class="bi bi-person-x"
+            ></i></a>
+        </td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>
